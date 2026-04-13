@@ -30,10 +30,12 @@ The environment was set up using an Open vSwitch (OVS) and a remote Ryu controll
 **Commands to initialize the environment:**
 1. Start the Ryu Controller:
    `ryu-manager firewall.py`
+   
    <img width="940" height="138" alt="image" src="https://github.com/user-attachments/assets/a0225147-5beb-4b15-94d7-9a58fc988d57" />
 
 3. Start the Mininet Topology:
    `sudo mn --topo single,4 --controller remote --switch ovsk,protocols=OpenFlow13 --mac`
+   
    <img width="940" height="262" alt="image" src="https://github.com/user-attachments/assets/6f4c0fb2-ee19-437e-a7d1-98714c5f91d9" />
 
 
