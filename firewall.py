@@ -99,6 +99,7 @@ class StaticFirewall(app_manager.RyuApp): #It initializes Ryu application
 
         # Install a flow so future packets don't have to visit the controller
         if out_port != ofproto.OFPP_FLOOD: #Packet with similar characterisitcs is handled by switch without involving controller
+            #And also if you know the destination, not if you are flooding
             # If it's an IP packet, match on IP so we don't accidentally bypass our firewall with a broad MAC rule
             if ip_pkt:
                 match = parser.OFPMatch(in_port=in_port, eth_type=0x0800, ipv4_src=ip_pkt.src, ipv4_dst=ip_pkt.dst)
